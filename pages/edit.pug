@@ -1,0 +1,11 @@
+html 
+    head 
+        title Edit User 
+    body 
+        h1 You can edit your user here
+            form(action="/create", method="post")  
+                input(name='name' placeholder="Name" value=`${user.name}`)
+                input(name='username' placeholder="Username" value=`${user.username}`)
+                input(name='email' placeholder="Email Address" value=`${user.email}`)
+                input(name='age' placeholder="Age" value=`${user.age}`)
+                input(type="submit")

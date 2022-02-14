@@ -1,0 +1,12 @@
+html 
+    head 
+        title Landing Page 
+    body 
+        h1 This is the landing page
+        h3 
+        a(href="/create") Create User
+        br
+        a(href="/listing") Users
+        ol
+            each user in data 
+                li Username: #{user.username}

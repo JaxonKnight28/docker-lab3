@@ -1,0 +1,16 @@
+---
+version: "3.8"
+services:
+  first-swarm:
+    image: user_manager_image:latest
+    ports:
+      - 3000:3000
+    deploy:
+      replicas: 3
+  second-swarm:
+    image: user_manager_image:latest
+    ports:
+      - 3001:3000
+    deploy:
+      replicas: 3
+...

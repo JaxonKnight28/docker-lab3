@@ -1,0 +1,21 @@
+html 
+    head 
+        title User Listing 
+    body 
+        h1 These are the users that have made an account
+        h3 You can edit or delete a user here
+        a(href="/create") Create User
+        br
+        a(href="/") Home
+        each user in data 
+            ul
+                li Name: #{user.name}
+                li Username: #{user.username}
+                li Email: #{user.email}
+                li Age: #{user.age}
+                li= user.uniqueId
+                form(action=`/listing${user.uniqueId}`, method="post")
+                    input(type="submit", value="Delete")
+                form(action=`/edit${user.uniqueId}`, method="post")
+                    input(type="submit", value="Edit")
+                    p --------------------------
